@@ -28,3 +28,5 @@ node_modules
 .lock-wscript
 
 client_secret.js
+
+debug.sh

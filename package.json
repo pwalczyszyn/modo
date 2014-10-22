@@ -2,7 +2,8 @@
   "name": "dothat.email",
   "version": "1.0.0",
   "description": "Mail TODO app",
-  "main": "Gruntfile.js",
+  "private": true,
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -20,6 +21,9 @@
     "express": "^4.9.7",
     "express-react-views": "^0.5.0",
     "googleapis": "^1.0.18",
+    "mongoose": "^3.8.17",
+    "morgan": "^1.4.0",
+    "passport": "^0.2.1",
     "react": "^0.11.2"
   }
 }
