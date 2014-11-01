@@ -12,6 +12,6 @@ module.exports = function (app) {
   app.set('view engine', 'jsx');
   app.engine('jsx', require('express-react-views').createEngine());
 
-  app.use(express.static(__dirname + '/public'));
+  app.use(express.static(__dirname + '/static/home'));
 
 };
