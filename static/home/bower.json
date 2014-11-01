@@ -1,0 +1,12 @@
+{
+  "name": "home",
+  "version": "1.0.0",
+  "description": "Do That Email Homepage",
+  "authors": [
+    "Piotr Walczyszyn <piotr.walczyszyn@gmail.com>"
+  ],
+  "private": true,
+  "dependencies": {
+    "foundation": "~5.4.7"
+  }
+}

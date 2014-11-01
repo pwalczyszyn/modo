@@ -30,3 +30,5 @@ node_modules
 client_secret.js
 
 debug.sh
+
+bower_components
