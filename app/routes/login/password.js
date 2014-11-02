@@ -1,6 +1,14 @@
 /* jshint node:true */
 'use strict';
 
+exports.request = function (req, res, next) {
+
+};
+
+exports.set = function (req, res, next) {
+
+};
+
 // var emails = require('app/emails'),
 //     mongoose = require('mongoose'),
 //     Account = mongoose.model('Account'),

@@ -10,6 +10,9 @@ require('./config/globals')(app);
 require('./config/express')(app);
 
 // Set the configurations
+require('./config/static')(app);
+
+// Set the configurations
 require('./config/routes')(app);
 
 function start(callback) {

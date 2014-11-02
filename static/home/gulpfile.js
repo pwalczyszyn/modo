@@ -8,6 +8,8 @@ var sourcemaps = require('gulp-sourcemaps');
 var autoprefixer = require('gulp-autoprefixer');
 var livereload = require('gulp-livereload');
 
+var minifyHTML = require('gulp-minify-html');
+
 var gutil = require('gulp-util');
 var watchify = require('watchify');
 var reactify = require('reactify');
@@ -41,7 +43,7 @@ function scripts(watch) {
     packageCache: {}, // required for watchify
     fullPaths: watch // required to be true only for watchify
   });
-  if(watch) {
+  if (watch) {
     bundler = watchify(bundler);
   }
 
@@ -67,7 +69,7 @@ gulp.task('build:prod', function() {
   gulp.start('build');
 });
 
-gulp.task('build', ['styles', 'scripts']);
+gulp.task('build', ['styles', 'scripts', 'html']);
 
 gulp.task('styles', function() {
   gulp.src('./src/scss/*.scss')
@@ -82,6 +84,15 @@ gulp.task('styles', function() {
 
 gulp.task('scripts', function() {
   return scripts(false);
+});
+
+gulp.task('html', function() {
+  return gulp.src('./src/*.html')
+    .pipe(minifyHTML({
+      comments: true,
+      spare: true
+    }))
+    .pipe(gulp.dest(dest));
 });
 
 gulp.task('watch', function() {

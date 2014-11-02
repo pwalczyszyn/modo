@@ -20,5 +20,5 @@ module.exports = function(app) {
   loginRouter.post('/password', login.password.request);
   loginRouter.get('/password/:passwordCode', login.password.set);
   loginRouter.post('/password/:passwordCode', login.password.set);
-  app.user('/login', loginRouter);
+  app.use('/login', loginRouter);
 };
