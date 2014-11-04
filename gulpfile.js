@@ -11,7 +11,10 @@ gulp.task('serve', function() {
       'NODE_ENV': 'development'
     },
     ignore: ['./static/**'],
-    nodeArgs: ['--debug']
+    watch: ['app', 'node_modules/suex/lib'],
+    nodeArgs: [
+      '--debug'
+    ]
   });
 
 });

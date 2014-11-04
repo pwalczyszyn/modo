@@ -3,6 +3,8 @@
 var express = require('express');
 var app = express();
 
+var suex = require('suex');
+
 // Set the configurations
 require('./config/globals')(app);
 
@@ -14,6 +16,8 @@ require('./config/static')(app);
 
 // Set the configurations
 require('./config/routes')(app);
+
+
 
 function start(callback) {
 
